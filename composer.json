@@ -1,0 +1,10 @@
+{
+    "name": "jasper/basicproj",
+    "authors": [
+        {
+            "name": "Jasper Alani",
+            "email": "jasperalani@gmail.com"
+        }
+    ],
+    "require": {}
+}
