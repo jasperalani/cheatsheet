@@ -1,0 +1,116 @@
+#song-view-wrapper {
+
+  #order-by {
+    position: absolute;
+    top: 127px;
+    left: 78px;
+    margin-top: 32px;
+
+    * {
+      margin: 0;
+      font-size: 1.2rem;
+      color: grey;
+      font-style: italic;
+    }
+  }
+
+
+  #display-table {
+    margin: 10px 66px 66px 66px;
+
+    th {
+      font-weight: 900;
+    }
+
+    td {
+      border: 1px lightgrey;
+      border-style: none none solid none;
+      padding: 5px;
+    }
+  }
+
+  #input-form {
+    display: inline-flex;
+    margin: 0;
+    font-size: 1rem;
+
+    select {
+      margin-top: -34px;
+    }
+
+    input[type="text"], select {
+      border: 2px lightgreen dotted;
+    }
+
+    .col-sm-3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    & * {
+      padding: 30px 40px;
+
+      &:focus {
+        outline: none;
+        border: 2px green dotted;
+        transition: 2s border ease;
+      }
+    }
+  }
+
+  #input-form-button {
+    width: 60%;
+    margin: auto;
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+      border: 2px green dotted;
+      transition: 2s border ease;
+    }
+  }
+}
+
+#song-view-wrapper1 {
+  .list-item {
+    &:hover {
+      color: black;
+    }
+  }
+
+  .first-of-list small {
+    font-weight: 100;
+  }
+
+  .directory-list ul {
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 1px dashed #ddd;
+  }
+
+  .directory-list li {
+    list-style: none;
+    color: #888;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  .directory-list a {
+    border-bottom: 1px solid transparent;
+    color: #888;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .directory-list a:hover {
+    border-color: #eee;
+    color: #000;
+  }
+
+  .directory-list .folder,
+  .directory-list .folder > a {
+    color: #777;
+    font-weight: bold;
+  }
+}
