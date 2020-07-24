@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f708cb3d-36d4-4ba8-91dc-401e9738f461" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,18 +19,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="427" />
-    <option name="y" value="33" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
   </component>
   <component name="ProjectId" id="1cByMudsSxd8vdiihqatqjyRv6h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -41,9 +39,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../general-uuid" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -63,6 +63,7 @@
       <workItem from="1581175393371" duration="113000" />
       <workItem from="1581183554559" duration="20000" />
       <workItem from="1590016238656" duration="157000" />
+      <workItem from="1595597432076" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Project V1">
       <created>1581175498490</created>
@@ -78,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581183565848</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updates + docker-compose.yml">
+      <created>1595597634352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595597634352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +95,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Project V1" />
     <MESSAGE value="gulpfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="gulpfile" />
+    <MESSAGE value="Updates + docker-compose.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates + docker-compose.yml" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1920" y="254" width="979" height="1186" key="CommitChangelistDialog2" timestamp="1595597634301">
+      <screen x="0" y="27" width="5360" height="1413" />
+    </state>
+    <state x="1920" y="254" width="979" height="1186" key="CommitChangelistDialog2/0.27.5360.1413@0.27.5360.1413" timestamp="1595597634301" />
+    <state x="690" y="601" width="530" height="605" key="FileChooserDialogImpl" timestamp="1595597453558">
+      <screen x="0" y="27" width="5360" height="1413" />
+    </state>
+    <state x="690" y="601" width="530" height="605" key="FileChooserDialogImpl/0.27.5360.1413@0.27.5360.1413" timestamp="1595597453558" />
+    <state x="816" y="738" width="512" height="331" key="MultipleFileMergeDialog" timestamp="1595597646543">
+      <screen x="0" y="27" width="5360" height="1413" />
+    </state>
+    <state x="816" y="738" width="512" height="331" key="MultipleFileMergeDialog/0.27.5360.1413@0.27.5360.1413" timestamp="1595597646543" />
+    <state x="3019" y="281" width="1241" height="912" key="SettingsEditor" timestamp="1595597499463">
+      <screen x="0" y="27" width="5360" height="1413" />
+    </state>
+    <state x="3019" y="281" width="1241" height="912" key="SettingsEditor/0.27.5360.1413@0.27.5360.1413" timestamp="1595597499462" />
+    <state x="455" y="568" width="1000" height="671" key="Vcs.Push.Dialog.v2" timestamp="1595597653165">
+      <screen x="0" y="27" width="5360" height="1413" />
+    </state>
+    <state x="455" y="568" width="1000" height="671" key="Vcs.Push.Dialog.v2/0.27.5360.1413@0.27.5360.1413" timestamp="1595597653165" />
   </component>
 </project>
