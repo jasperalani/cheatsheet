@@ -1,0 +1,86 @@
+version: '3'
+services:
+
+  php:
+    # image: 'php:7.2-fpm'
+    build:
+      context: ./docker
+      dockerfile: php.Dockerfile
+    container_name: ${APP_NAME}-php
+    links:
+      - 'mariadb'
+    networks:
+      - basicproj
+    volumes:
+      - './src:/var/www/html'
+
+  nginx:
+    image: 'nginx:1.13.6'
+    container_name: ${APP_NAME}-nginx
+    links:
+      - 'php'
+    networks:
+      - basicproj
+    volumes:
+      - './src:/var/www/html'
+#      - './config/nginx:/etc/nginx/conf.d'
+
+  go:
+    container_name: ${APP_NAME:?err}-go
+    build:
+      context: ./go
+      dockerfile: go.Dockerfile
+    ports:
+      - "10000:10000"
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+      - redis
+    environment:
+      REDIS_URL: redis:6379
+    networks:
+      - babylon
+
+  redis:
+    container_name: ${APP_NAME:?err}-redis
+    image: "redis:alpine"
+    restart: unless-stopped
+    networks:
+      - babylon
+
+  mariadb:
+    image: mariadb:10.3.9
+    container_name: ${APP_NAME:?err}-mariadb
+    build:
+      context: ./mariadb
+      dockerfile: mariadb.Dockerfile
+    ports:
+      - '3306:3306'
+    restart: 'on-failure'
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:?err}
+      MYSQL_USER: ${MYSQL_USER:?err}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?err}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?err}
+    volumes:
+      - ${PWD}
+    networks:
+      - babylon
+
+  react:
+    container_name: ${APP_NAME:?err}-react
+    stdin_open: true
+    build:
+      context: ./react
+      dockerfile: react.Dockerfile
+      args:
+        app_env: ${APP_ENV}
+    volumes:
+      - ./react:/react
+    ports:
+      - "3000:3000"
+    networks:
+      - babylon
+
+networks:
+  basicproj
