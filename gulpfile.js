@@ -1,59 +1,26 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const changed = require('gulp-changed');
-const newer = require('gulp-newer');
-const minify = require('gulp-minify');
-const gutil = require('gulp-util');
-const ftp = require('vinyl-ftp');
+const gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    changed = require('gulp-changed'),
+    minify = require('gulp-minify');
 
-const global_SOURCE = './src/**/*';
-const global_DISTRIBUTION = './dist';
-
-const deployMiddleman = './tmp';
-let distibutionMiddleman = global_DISTRIBUTION+'/**/*';
-const remote_location = '/public_html';
-var conn = ftp.create({
-    host: 'files.000webhost.com',
-    port: 21,
-    user: 'songgr',
-    password: '68Bw^h@5u7f4Xvvl',
-    log: gutil.log
-});
-
-gulp.task('watch-src', function () {
-    watchSrc();
-});
-gulp.task('watch-deploy', function () {
-    watchSrc();
-    gulp.watch(global_DISTRIBUTION, gulp.series('deploy-newer'));
-});
-
-gulp.task('deploy', function(){
-    return gulp.src(distibutionMiddleman)
-        .pipe(conn.dest(remote_location))
-});
-gulp.task('watch-deploy', function () {
-    watchSrc();
-    gulp.watch(global_DISTRIBUTION, gulp.series('deploy-newer'));
-});
-gulp.task('deploy-newer', function(){
-    return gulp.src(distibutionMiddleman)
-        .pipe(conn.newer(remote_location))
-        .pipe(conn.dest(remote_location))
-});
+const pre_path = './app/',
+    global_SOURCE = pre_path + 'src/**/*',
+    global_DISTRIBUTION = pre_path + 'dist',
+    copychanged_SOURCE = [
+        global_SOURCE,
+        '!' + pre_path + 'src/sass/**',
+        '!' + pre_path + 'src/js/**'
+    ];
 
 /* All */
-gulp.task('watch-src', function () {
-    watchSrc();
-});
-function watchSrc() {
+gulp.task('watch-all', function () {
     gulp.watch(sass_SOURCE, gulp.series('copy-sass'));
     gulp.watch(js_SOURCE, gulp.series('copy-js'));
     gulp.watch(php_SOURCE, gulp.series('changed-php'));
     gulp.watch(php_index_SOURCE, gulp.series('copy-php-index'));
-}
+    gulp.watch(res_SOURCE, gulp.series('copy-res'));
+});
 
-const copychanged_SOURCE = [global_SOURCE, '!./src/sass/**', '!./src/js/**'];
 gulp.task('copy-all', function () {
     return gulp.src(copychanged_SOURCE)
         .pipe(gulp.dest(global_DISTRIBUTION));
@@ -69,9 +36,9 @@ gulp.task('changed-all', function () {
 // });
 
 /* Sass */
-const sass_SOURCE = './src/sass/**/*';
-const sass_THEME = './src/sass/theme.scss';
-const sass_DISTRIBUTION = './dist/css';
+const sass_SOURCE = pre_path + 'src/sass/**/*';
+const sass_THEME = pre_path + 'src/sass/theme.scss';
+const sass_DISTRIBUTION = pre_path + 'dist/css';
 gulp.task('copy-sass', function () {
     return gulp.src(sass_THEME)
         .pipe(sass())
@@ -82,8 +49,8 @@ gulp.task('watch-sass', function () {
 });
 
 /* JavaScript */
-const js_SOURCE = './src/js/**/*';
-const js_DISTRIBUTION = './dist/js';
+const js_SOURCE = pre_path + 'src/js/**/*';
+const js_DISTRIBUTION = pre_path + 'dist/js';
 gulp.task('copy-js', function () {
     return gulp.src(js_SOURCE)
         .pipe(minify())
@@ -94,8 +61,8 @@ gulp.task('watch-js', function () {
 });
 
 /* PHP */
-const php_SOURCE = './src/php/**/*';
-const php_DISTRIBUTION = './dist/php';
+const php_SOURCE = pre_path + 'src/php/**/*';
+const php_DISTRIBUTION = pre_path + 'dist/php';
 gulp.task('copy-php', function () {
     return gulp.src(php_SOURCE)
         .pipe(gulp.dest(php_DISTRIBUTION));
@@ -108,11 +75,21 @@ gulp.task('changed-php', function () {
 gulp.task('watch-php', function () {
     gulp.watch(php_SOURCE, gulp.series('changed-php'));
 });
-const php_index_SOURCE = './src/index.php';
+const php_index_SOURCE = pre_path + 'src/index.php';
 gulp.task('copy-php-index', function () {
     return gulp.src(php_index_SOURCE)
         .pipe(gulp.dest(global_DISTRIBUTION));
 });
 gulp.task('watch-php-index', function () {
     gulp.watch(php_index_SOURCE, gulp.series('copy-php-index'));
+});
+
+const res_SOURCE = pre_path + 'src/res/**/*',
+    res_DISTRIBUTION = pre_path + 'dist/res';
+gulp.task('copy-res', function () {
+    return gulp.src(res_SOURCE)
+        .pipe(gulp.dest(res_DISTRIBUTION));
+});
+gulp.task('watch-res', function () {
+    gulp.watch(res_SOURCE, gulp.series('copy-res'));
 });
