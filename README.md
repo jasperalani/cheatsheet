@@ -15,7 +15,7 @@ $ docker-compose up
 
 &nbsp;
 #### create .env file
-APP_NAME=cheatsheet
-MYSQL_DATABASE=cheatsheet
-MYSQL_USER=cheater
-MYSQL_PASSWORD=withasheet
+- APP_NAME=cheatsheet
+- MYSQL_DATABASE=cheatsheet
+- MYSQL_USER=cheater
+- MYSQL_PASSWORD=withasheet
