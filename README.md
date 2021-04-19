@@ -1,6 +1,10 @@
 ### Cheatsheet
 
-##### Useful code for starting a new project
+##### Useful code for starting a new project#
+
+&nbsp;
+#### php.ini
+[php.ini](php.ini)
 
 &nbsp;
 #### npm

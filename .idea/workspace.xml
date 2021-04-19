@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f708cb3d-36d4-4ba8-91dc-401e9738f461" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +37,25 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../general-uuid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jasper\PhpstormProjects\basicproj" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,6 +70,9 @@
       <workItem from="1581183554559" duration="20000" />
       <workItem from="1590016238656" duration="157000" />
       <workItem from="1595597432076" duration="264000" />
+      <workItem from="1601472033762" duration="137000" />
+      <workItem from="1617185135830" duration="59000" />
+      <workItem from="1618842088497" duration="92000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Project V1">
       <created>1581175498490</created>
@@ -86,38 +95,38 @@
       <option name="project" value="LOCAL" />
       <updated>1595597634352</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adds sql">
+      <created>1617185186585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617185186585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Project V1" />
     <MESSAGE value="gulpfile" />
     <MESSAGE value="Updates + docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates + docker-compose.yml" />
+    <MESSAGE value="Adds sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds sql" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1920" y="254" width="979" height="1186" key="CommitChangelistDialog2" timestamp="1595597634301">
-      <screen x="0" y="27" width="5360" height="1413" />
+    <state x="523" y="54" width="864" height="1006" key="CommitChangelistDialog2" timestamp="1617185186464">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="1920" y="254" width="979" height="1186" key="CommitChangelistDialog2/0.27.5360.1413@0.27.5360.1413" timestamp="1595597634301" />
-    <state x="690" y="601" width="530" height="605" key="FileChooserDialogImpl" timestamp="1595597453558">
-      <screen x="0" y="27" width="5360" height="1413" />
+    <state x="523" y="54" width="864" height="1006" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1617185186464" />
+    <state x="555" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1617185191595">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="690" y="601" width="530" height="605" key="FileChooserDialogImpl/0.27.5360.1413@0.27.5360.1413" timestamp="1595597453558" />
-    <state x="816" y="738" width="512" height="331" key="MultipleFileMergeDialog" timestamp="1595597646543">
-      <screen x="0" y="27" width="5360" height="1413" />
+    <state x="555" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1617185191595" />
+    <state x="739" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617185148062">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="816" y="738" width="512" height="331" key="MultipleFileMergeDialog/0.27.5360.1413@0.27.5360.1413" timestamp="1595597646543" />
-    <state x="3019" y="281" width="1241" height="912" key="SettingsEditor" timestamp="1595597499463">
-      <screen x="0" y="27" width="5360" height="1413" />
-    </state>
-    <state x="3019" y="281" width="1241" height="912" key="SettingsEditor/0.27.5360.1413@0.27.5360.1413" timestamp="1595597499462" />
-    <state x="455" y="568" width="1000" height="671" key="Vcs.Push.Dialog.v2" timestamp="1595597653165">
-      <screen x="0" y="27" width="5360" height="1413" />
-    </state>
-    <state x="455" y="568" width="1000" height="671" key="Vcs.Push.Dialog.v2/0.27.5360.1413@0.27.5360.1413" timestamp="1595597653165" />
+    <state x="739" y="466" width="441" height="181" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1617185148062" />
   </component>
 </project>
